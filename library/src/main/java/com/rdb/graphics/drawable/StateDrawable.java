@@ -1,10 +1,12 @@
-package com.rdb.graphics;
+package com.rdb.graphics.drawable;
 
 import android.graphics.Canvas;
 import android.graphics.PixelFormat;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
+
+import com.rdb.graphics.States;
 
 public abstract class StateDrawable extends Drawable {
 

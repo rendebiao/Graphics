@@ -1,4 +1,4 @@
-package com.rdb.graphics;
+package com.rdb.graphics.drawable;
 
 
 import android.content.res.ColorStateList;
@@ -13,6 +13,8 @@ import android.graphics.RectF;
 import android.graphics.drawable.BitmapDrawable;
 
 import androidx.annotation.NonNull;
+
+import com.rdb.graphics.States;
 
 public abstract class BitmapShapeDrawable extends BitmapDrawable {
 

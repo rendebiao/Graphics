@@ -1,4 +1,4 @@
-package com.rdb.graphics;
+package com.rdb.graphics.drawable;
 
 import android.graphics.drawable.GradientDrawable;
 

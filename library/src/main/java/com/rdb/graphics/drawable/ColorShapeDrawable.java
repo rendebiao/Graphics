@@ -1,4 +1,4 @@
-package com.rdb.graphics;
+package com.rdb.graphics.drawable;
 
 import android.content.res.ColorStateList;
 import android.graphics.Canvas;
@@ -9,6 +9,8 @@ import android.graphics.Rect;
 import android.graphics.RectF;
 
 import androidx.annotation.NonNull;
+
+import com.rdb.graphics.States;
 
 public abstract class ColorShapeDrawable extends StateDrawable {
 

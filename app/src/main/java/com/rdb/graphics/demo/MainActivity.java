@@ -6,8 +6,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.rdb.graphics.ColorCornerDrawable;
 import com.rdb.graphics.color.SimpleColorStateList;
+import com.rdb.graphics.drawable.ColorCornerDrawable;
 
 public class MainActivity extends AppCompatActivity {
 
