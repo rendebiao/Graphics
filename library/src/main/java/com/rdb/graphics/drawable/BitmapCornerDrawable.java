@@ -12,9 +12,9 @@ import androidx.annotation.NonNull;
 
 public class BitmapCornerDrawable extends BitmapShapeDrawable {
 
-    private float cornerRadius;
+    private final float cornerRadius;
 
-    public BitmapCornerDrawable(Bitmap bitmap, float cornerRadius) {
+    public BitmapCornerDrawable(@NonNull Bitmap bitmap, float cornerRadius) {
         this(bitmap, cornerRadius, 0, null);
     }
 

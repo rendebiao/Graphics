@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/resultView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/testView1"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
         android:layout_margin="24dp"
-        android:text="11111111111111111111111111" />
+        android:text="ColorCornerDrawable" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/testView2"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_margin="24dp"
+        android:text="ColorOvalDrawable" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/testView3"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_margin="24dp"
+        android:text="ColorPolygonDrawable" />
 
 </LinearLayout>

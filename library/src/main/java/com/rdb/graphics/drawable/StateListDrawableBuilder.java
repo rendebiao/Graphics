@@ -10,12 +10,12 @@ import java.util.List;
  * Created by DB on 2018/5/18.
  */
 
-public class StateDrawableBuilder {
+public class StateListDrawableBuilder {
 
+    private final List<Item> items = new ArrayList<>();
     private StateListDrawable drawable;
-    private List<Item> items = new ArrayList<>();
 
-    public StateDrawableBuilder addItem(Drawable drawable, int... state) {
+    public StateListDrawableBuilder addItem(Drawable drawable, int... state) {
         items.add(new Item(drawable, state));
         return this;
     }

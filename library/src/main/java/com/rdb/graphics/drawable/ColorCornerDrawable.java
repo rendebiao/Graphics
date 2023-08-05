@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 
 public class ColorCornerDrawable extends ColorShapeDrawable {
 
-    private float cornerRadius;
+    private final float cornerRadius;
 
     public ColorCornerDrawable(@NonNull ColorStateList colorStateList, float cornerRadius) {
         super(colorStateList);

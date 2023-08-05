@@ -11,8 +11,8 @@ import java.util.List;
 
 public class ColorStateListBuilder {
 
+    private final List<Item> items = new ArrayList<>();
     private ColorStateList list;
-    private List<Item> items = new ArrayList<>();
 
     public ColorStateListBuilder addItem(int color, int... state) {
         items.add(new Item(color, state));

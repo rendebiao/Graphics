@@ -2,7 +2,7 @@ package com.rdb.graphics.drawable;
 
 import android.graphics.drawable.GradientDrawable;
 
-public class Shape {
+public class ShapeUtils {
 
     public static GradientDrawable oval(int solidColor) {
         return oval(solidColor, 0, 0);

@@ -18,12 +18,12 @@ import com.rdb.graphics.States;
 
 public abstract class BitmapShapeDrawable extends BitmapDrawable {
 
-    private Paint paint;
+    private final Paint paint;
+    private final boolean strokeEnable;
+    private final States curStates = new States();
     private Paint strokePaint;
     private float strokeWidth;
-    private boolean strokeEnable;
     private States states = new States();
-    private States curStates = new States();
     private ColorStateList strokeColorStateList;
 
     public BitmapShapeDrawable(@NonNull Bitmap bitmap) {

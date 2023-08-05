@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 
 public class BitmapOvalDrawable extends BitmapShapeDrawable {
 
-    public BitmapOvalDrawable(Bitmap bitmap) {
+    public BitmapOvalDrawable(@NonNull Bitmap bitmap) {
         this(bitmap, 0, null);
     }
 

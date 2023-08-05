@@ -3,8 +3,7 @@ package com.rdb.graphics;
 public class States {
 
     int[] state;
-    boolean enable, pressed, checked, selected, focused, checkable,
-            activated, windowFocused, active, single, first, middle, last;
+    boolean enable, pressed, checked, selected, focused, checkable, activated, windowFocused, active, single, first, middle, last, accelerated, hovered, drag_can_accept, drag_hovered;
 
     public States() {
 
@@ -47,6 +46,14 @@ public class States {
                 middle = true;
             } else if (state[i] == android.R.attr.state_last) {
                 last = true;
+            } else if (state[i] == android.R.attr.state_accelerated) {
+                accelerated = true;
+            } else if (state[i] == android.R.attr.state_hovered) {
+                hovered = true;
+            } else if (state[i] == android.R.attr.state_drag_can_accept) {
+                drag_can_accept = true;
+            } else if (state[i] == android.R.attr.state_drag_hovered) {
+                drag_hovered = true;
             }
         }
         this.state = state;
@@ -66,6 +73,10 @@ public class States {
         first = false;
         middle = false;
         last = false;
+        accelerated = false;
+        hovered = false;
+        drag_can_accept = false;
+        drag_hovered = false;
     }
 
     @Override
@@ -74,14 +85,12 @@ public class States {
             return false;
         }
         States s = (States) o;
-        return enable == s.enable && pressed == s.pressed && checked == s.checked && selected == s.selected && focused == s.focused && checkable == s.checkable
-                && activated == s.activated && windowFocused == s.windowFocused && active == s.active && single == s.single && first == s.first && middle == s.middle && last == s.last;
+        return enable == s.enable && pressed == s.pressed && checked == s.checked && selected == s.selected && focused == s.focused && checkable == s.checkable && activated == s.activated && windowFocused == s.windowFocused && active == s.active && single == s.single && first == s.first && middle == s.middle && last == s.last && accelerated == s.accelerated && hovered == s.hovered && drag_can_accept == s.drag_can_accept && drag_hovered == s.drag_hovered;
     }
 
     @Override
     public String toString() {
-        return "ViewState enable = " + enable + " pressed = " + pressed + " checked = " + checked + " selected = " + selected + " focused = " + focused + " checkable = " + checkable
-                + " activated = " + activated + " windowFocused = " + windowFocused + " active = " + active + " single = " + single + " first = " + first + " first = " + middle + " last = " + last;
+        return "ViewState enable = " + enable + " pressed = " + pressed + " checked = " + checked + " selected = " + selected + " focused = " + focused + " checkable = " + checkable + " activated = " + activated + " windowFocused = " + windowFocused + " active = " + active + " single = " + single + " first = " + first + " middle = " + middle + " last = " + last + " accelerated = " + accelerated + " hovered = " + hovered + " drag_can_accept = " + drag_can_accept + " drag_hovered = " + drag_hovered;
     }
 
     public int[] getState() {
@@ -138,5 +147,21 @@ public class States {
 
     public boolean isLast() {
         return last;
+    }
+
+    public boolean isAccelerated() {
+        return accelerated;
+    }
+
+    public boolean isHovered() {
+        return hovered;
+    }
+
+    public boolean isDragCanAccept() {
+        return drag_can_accept;
+    }
+
+    public boolean isDragHovered() {
+        return drag_hovered;
     }
 }

@@ -10,7 +10,7 @@ import com.rdb.graphics.States;
 
 public abstract class StateDrawable extends Drawable {
 
-    private RectF rectF = new RectF();
+    private final RectF rectF = new RectF();
     private States viewStates = new States();
     private States curViewStates = new States();
 

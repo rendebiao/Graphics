@@ -14,12 +14,12 @@ import com.rdb.graphics.States;
 
 public abstract class ColorShapeDrawable extends StateDrawable {
 
-    private Paint paint;
+    private final Paint paint;
+    private final boolean strokeEnable;
+    private final ColorStateList colorStateList;
     private Paint strokePaint;
     private Rect padding;
     private float strokeWidth;
-    private boolean strokeEnable;
-    private ColorStateList colorStateList;
     private ColorStateList strokeColorStateList;
 
     public ColorShapeDrawable(@NonNull ColorStateList colorStateList) {
