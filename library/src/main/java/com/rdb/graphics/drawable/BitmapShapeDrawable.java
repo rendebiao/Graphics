@@ -2,6 +2,7 @@ package com.rdb.graphics.drawable;
 
 
 import android.content.res.ColorStateList;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -26,12 +27,12 @@ public abstract class BitmapShapeDrawable extends BitmapDrawable {
     private States states = new States();
     private ColorStateList strokeColorStateList;
 
-    public BitmapShapeDrawable(@NonNull Bitmap bitmap) {
-        this(bitmap, 0, null);
+    public BitmapShapeDrawable(Resources resources, @NonNull Bitmap bitmap) {
+        this(resources, bitmap, 0, null);
     }
 
-    public BitmapShapeDrawable(@NonNull Bitmap bitmap, float strokeWidth, ColorStateList strokeColorStateList) {
-        super(bitmap);
+    public BitmapShapeDrawable(Resources resources, @NonNull Bitmap bitmap, float strokeWidth, ColorStateList strokeColorStateList) {
+        super(resources, bitmap);
         paint = new Paint();
         paint.setAntiAlias(true);
         paint.setColor(Color.WHITE);

@@ -1,6 +1,7 @@
 package com.rdb.graphics.drawable;
 
 import android.content.res.ColorStateList;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -16,12 +17,12 @@ public class BitmapPolygonDrawable extends BitmapShapeDrawable {
     private float[] degrees;
     private Path drawPath;
 
-    public BitmapPolygonDrawable(@NonNull Bitmap bitmap, int sideCount, float startDegree) {
-        this(bitmap, 0, null, sideCount, startDegree);
+    public BitmapPolygonDrawable(Resources resources, @NonNull Bitmap bitmap, int sideCount, float startDegree) {
+        this(resources, bitmap, 0, null, sideCount, startDegree);
     }
 
-    public BitmapPolygonDrawable(@NonNull Bitmap bitmap, float strokeWidth, ColorStateList strokeColorStateList, int sideCount, float startDegree) {
-        super(bitmap, strokeWidth, strokeColorStateList);
+    public BitmapPolygonDrawable(Resources resources, @NonNull Bitmap bitmap, float strokeWidth, ColorStateList strokeColorStateList, int sideCount, float startDegree) {
+        super(resources, bitmap, strokeWidth, strokeColorStateList);
         init(sideCount, startDegree);
     }
 

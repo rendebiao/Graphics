@@ -1,6 +1,7 @@
 package com.rdb.graphics.drawable;
 
 import android.content.res.ColorStateList;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -10,12 +11,12 @@ import androidx.annotation.NonNull;
 
 public class BitmapOvalDrawable extends BitmapShapeDrawable {
 
-    public BitmapOvalDrawable(@NonNull Bitmap bitmap) {
-        this(bitmap, 0, null);
+    public BitmapOvalDrawable(Resources resources, @NonNull Bitmap bitmap) {
+        this(resources, bitmap, 0, null);
     }
 
-    public BitmapOvalDrawable(@NonNull Bitmap bitmap, float strokeWidth, ColorStateList strokeColorStateList) {
-        super(bitmap, strokeWidth, strokeColorStateList);
+    public BitmapOvalDrawable(Resources resources, @NonNull Bitmap bitmap, float strokeWidth, ColorStateList strokeColorStateList) {
+        super(resources, bitmap, strokeWidth, strokeColorStateList);
     }
 
     @Override

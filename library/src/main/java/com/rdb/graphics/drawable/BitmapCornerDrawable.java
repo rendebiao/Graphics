@@ -2,6 +2,7 @@ package com.rdb.graphics.drawable;
 
 
 import android.content.res.ColorStateList;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -14,12 +15,12 @@ public class BitmapCornerDrawable extends BitmapShapeDrawable {
 
     private final float cornerRadius;
 
-    public BitmapCornerDrawable(@NonNull Bitmap bitmap, float cornerRadius) {
-        this(bitmap, cornerRadius, 0, null);
+    public BitmapCornerDrawable(Resources resources, @NonNull Bitmap bitmap, float cornerRadius) {
+        this(resources, bitmap, cornerRadius, 0, null);
     }
 
-    public BitmapCornerDrawable(@NonNull Bitmap bitmap, float cornerRadius, float strokeWidth, ColorStateList strokeColorStateList) {
-        super(bitmap, strokeWidth, strokeColorStateList);
+    public BitmapCornerDrawable(Resources resources, @NonNull Bitmap bitmap, float cornerRadius, float strokeWidth, ColorStateList strokeColorStateList) {
+        super(resources, bitmap, strokeWidth, strokeColorStateList);
         this.cornerRadius = cornerRadius;
     }
 
